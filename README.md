@@ -11,7 +11,7 @@ Information for dataset related code, logics and explanations.
 Subscription Status, Shipping Type, Discount Applied, Promo Code Used,
 Payment Method, Frequency of Purchases
 
-## Fitstatistics & vocab 
+## Fit statistics & vocab 
 
 ```python
 import csv, math, json

@@ -67,7 +67,7 @@ def fit_transformer(csv_path, encoding="utf-8"):
     return {"numeric": scaler_stats, "categorical": cat2idx}
 
 # Example:
-# tf = fit_transformer("shopping_benavior_updated.csv")
+# tf = fit_transformer("shopping_behavior_updated.csv")
 # json.dump(tf, open("transform.json","w"))
 ```
 
@@ -136,7 +136,7 @@ import json; json.dump(tf, open("transform.json","w"))
 tf = json.load(open("transform.json"))
 row_tf = make_row_transform(tf, target="Purchase Amount (USD)")
 
-dataset = StreamingCSVDataset("shopping_benavior_updated.csv", row_tf)
+dataset = StreamingCSVDataset("shopping_behavior_updated.csv", row_tf)
 loader = torch.utils.data.DataLoader(dataset, batch_size=32)
 
 # 3) Peek one batch
@@ -223,7 +223,7 @@ class StreamingCSVDataset(IterableDataset):
 
 Usage:
 ```python 
-train_ds = StreamingCSVDataset("shopping_benavior_updated.csv", row_tf, split="train", ratio=0.8)
-test_ds = StreamingCSVDataset("shopping_benavior_updated.csv", row_tf, split="test", ratio=0.8)
+train_ds = StreamingCSVDataset("shopping_behavior_updated.csv", row_tf, split="train", ratio=0.8)
+test_ds = StreamingCSVDataset("shopping_behavior_updated.csv", row_tf, split="test", ratio=0.8)
 ```
 

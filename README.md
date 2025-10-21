@@ -129,7 +129,7 @@ class StreamingCSVDataset(IterableDataset):
 
 ```python
 # 1) Fit and save transforms (run once)
-tf = fit_transformer("shopping_benavior_updated.csv")
+tf = fit_transformer("shopping_behavior_updated.csv")
 import json; json.dump(tf, open("transform.json","w"))
 
 # 2) Load & build dataset/loader

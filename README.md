@@ -13,7 +13,7 @@ Payment Method, Frequency of Purchases
 
 ## Fitstatistics & vocab 
 
-```
+```python
 import csv, math, json
 from collections import defaultdict
 
@@ -73,7 +73,7 @@ def fit_transformer(csv_path, encoding="utf-8"):
 
 ## Stream rows and tensors with an `IterableDataset`
 
-```
+```python
 import torch
 from torch.utils.data import IterableDataset
 
